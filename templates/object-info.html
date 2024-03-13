@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Program</title>
+    <link rel="stylesheet" href="../static/object-info.css">
+</head>
+<body>
+    <header>
+        <h1>Object Detection Program</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to the object detection program webpage! This page explains how the program works to detect objects in images using the MobileNet SSD model trained on the COCO dataset.
+            </p>
+        </section>
+        
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>
+                The object detection program takes an input image and uses the MobileNet SSD model to predict the presence of objects in the image. The program processes the image, draws bounding boxes around the detected objects, and displays the object labels along with their confidence scores.
+            </p>
+            <p>
+                Here's a step-by-step breakdown of how the program works:
+            </p>
+            <ol>
+              <li><strong>Model Loading:</strong> The MobileNet SSD model and class labels are loaded from pre-trained files, allowing the program to recognize a wide range of objects.</li>
+              <li><strong>Prediction:</strong> The program takes an input image and converts it into a blob, which is then passed through the network to obtain output predictions.</li>
+              <li><strong>Filtering:</strong> The predictions are filtered based on confidence scores. Objects with a confidence level lower than 50% are discarded, ensuring accurate detection.</li>
+              <li><strong>Bounding Boxes:</strong> For each detected object, the program draws bounding boxes around them to visually represent their location within the image.</li>
+              <li><strong>Object Labels:</strong> Alongside each bounding box, the program displays the label of the detected object, indicating what it is. Additionally, the confidence score for each detection is shown as a percentage.</li>
+              <li><strong>Output:</strong> Once all the objects have been processed, the program saves the processed image with the bounding boxes and labels, allowing users to view the results.</li>
+          </ol>
+      </section>
+
+          <section id="detected-objects">
+              <h2>Detected Objects</h2>
+              <p>
+                  This object detection program is capable of detecting the following objects:
+              </p>
+              <ul>
+                  <li>Person</li>
+                  <li>Car</li>
+                  <li>Bicycle</li>
+                  <li>Dog</li>
+                  <li>Cat</li>
+                  <li>Stop Sign</li>
+              </ul>
+              <p>
+                These are just a few examples of the objects that this program can detect. It is trained on the COCO (Common Objects in Context) dataset, which contains a wide variety of objects, making it capable of detecting numerous other objects as well.
+            </p>
+          </section>
+  
+          <section id="example-output">
+              <h2>Example Output</h2>
+              <p>
+                  Below is an example output of the object detection program applied to an image:
+              </p>
+              <div class="output-image">
+                  <img src="../static/output/object_test.jpg" alt="Example Output">
+              </div>
+          </section>
+          <div class="button-container"> 
+            <a class="back-button" href="{{ url_for('index') }}">Back to Detection Page</a>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2023 Facial & Object Recognition by Shivam</p>
+      </footer>
+  </body>
+  </html>

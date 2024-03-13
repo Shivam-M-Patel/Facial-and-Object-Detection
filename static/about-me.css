@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.round-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    margin: 10px;
+    padding: 8px 16px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+
+#thank-you {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4287f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.button-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #004691;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Animation */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply the animation to main sections */
+section {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+header {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+#thank-you {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+/* Apply the animation to the button */
+.button-container {
+    animation: fadeInLeft 1.5s ease-in-out;
+}

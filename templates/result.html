@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* White text color */
+        }
+
+        #result-container {
+            max-width: 1000px; /* Limit the content width to maintain image aspect ratio */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #000000; /* White text color */
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        #image-preview {
+            margin-top: 20px;
+            display: flex; /* Use flexbox to center the image */
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden; /* Hide any overflowing elements within the image preview */
+        }
+
+        #result-image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff; /* White text color */
+            background-color: #4287f5; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .button-container {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .back-button:hover {
+            background-color: #004691; /* Darker blue on hover */
+        }
+
+        .attribution {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="result-container">
+        <h2>Detection Result</h2>
+        <div id="image-preview">
+            <img id="result-image" src="{{ url_for('static', filename=image_path) }}" alt="Image Preview">
+        </div>
+        <div class="button-container"> 
+            <a class="back-button" href="{{ url_for('index') }}">Back to Detection Page</a>
+        </div>
+        <div class="attribution">Image preview by <a href="{{ url_for('about_me') }}">Shivam</a></div>
+    </div>
+
+</body>
+</html>

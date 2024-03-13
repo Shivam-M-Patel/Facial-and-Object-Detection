@@ -1,0 +1,397 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #34495E;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ef948a;
+}
+
+#result-container {
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#image-preview {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.custom-file-upload {
+  margin-top: 10px;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 12px 20px; /* Adjust padding for better appearance */
+  background-color: #2C3E50;
+  color: #fff;
+  border: 2px solid #2C3E50; /* Add a border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* For the hover effect */
+  overflow: hidden; /* Hide the pseudo-element */
+}
+
+.custom-file-upload:hover {
+  background-color: #4C7096; /* Darker background on hover */
+}
+
+.custom-file-upload::before {
+  content: "Select an Image";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.3s ease;
+}
+
+.image-size-note {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+
+#selected-file {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-top: 10px; /* Add some spacing between the button and the text */
+  font-size: 14px;
+  color: #555;
+}
+
+#options-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.option {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.option:hover {
+  transform: scale(1.05);
+}
+
+.option-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.option-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.option-link {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.option-link:hover {
+  background-color: #555;
+}
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the options horizontally */
+}
+
+.option-card {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+}
+
+.option-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.option-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.option-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Style for custom radio buttons */
+.custom-radio {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 8px;
+}
+
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #555;
+  border-radius: 50%;
+  display: none;
+}
+
+input[type="radio"]:checked + .custom-radio::after {
+  display: block;
+}
+
+#about-object-detection,
+#about-facial-detection,
+#about-me {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    #about-object-detection,
+    #about-facial-detection,
+    #about-me {
+      margin-top: 40px;
+    }
+
+    #about-object-detection:hover,
+    #about-facial-detection:hover,
+    #about-me:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #about-object-detection a,
+    #about-facial-detection a,
+    #about-me a {
+      text-decoration: none;
+      color: #694786;
+      font-size: 20px;
+      transition: color 0.2s ease-in-out;
+    }
+
+    #about-object-detection a:hover,
+    #about-facial-detection a:hover,
+    #about-me a:hover {
+      color: #C06C84;
+    }
+
+    #ring body
+    {
+      margin:0;
+      padding:0;
+      background:#262626;
+    }
+    #loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.895); /* Semi-transparent black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Higher z-index to appear above other elements */
+    }
+    
+    #ring
+    {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:150px;
+      height:150px;
+      background:transparent;
+      border:3px solid #3c3c3c;
+      border-radius:50%;
+      text-align:center;
+      line-height:150px;
+      font-family:sans-serif;
+      font-size:20px;
+      color:#4287f5;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      text-shadow:0 0 10px #4287f5;
+      box-shadow:0 0 20px rgba(0,0,0,.5);
+    }
+    #ring:before
+    {
+      content:'';
+      position:absolute;
+      top:-3px;
+      left:-3px;
+      width:100%;
+      height:100%;
+      border:3px solid transparent;
+      border-top:3px solid #4287f5;
+      border-right:3px solid #4287f5;
+      border-radius:50%;
+      animation:animateC 2s linear infinite;
+    }
+    #ring span
+    {
+      display:block;
+      position:absolute;
+      top:calc(50% - 2px);
+      left:50%;
+      width:50%;
+      height:4px;
+      background:transparent;
+      transform-origin:left;
+      animation:animate 2s linear infinite;
+    }
+
+    #ring span:before
+    {
+      content:'';
+      position:absolute;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:#4287f5;
+      top:-6px;
+      right:-8px;
+      box-shadow:0 0 20px #4287f5;
+    }
+
+
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}
+
+
+    /* Animation */
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+header {
+  animation: fadeInLeft 1.5s ease-in-out;
+}
+

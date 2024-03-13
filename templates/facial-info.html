@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Detection Program</title>
+    <link rel="stylesheet" href="../static/facial-info.css">
+</head>
+<body>
+    <header>
+        <h1>Facial Detection Program</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to the facial detection program webpage! This page explains how the program works to detect faces in images using the face_recognition library in Python.
+            </p>
+        </section>
+        
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>
+                This facial detection program uses advanced face recognition technology to accurately detect and recognize faces in images. The process involves several steps that ensure robust and reliable face detection and recognition.
+            </p>
+            <ol>
+                <li>
+                    <strong>Data Preparation:</strong> We start by collecting a diverse set of images of known individuals to create a comprehensive dataset for training our model. The images are carefully labeled with the corresponding names of the individuals.
+                </li>
+                <li>
+                    <strong>Feature Extraction:</strong> Extract high-dimensional feature vectors (encodings) from the images of known individuals using the face_recognition library. These encodings capture unique facial features, serving as distinctive identifiers.
+                </li>
+                <li>
+                    <strong>Model Training:</strong> Train a machine learning model with the dataset and extracted features. The model learns to distinguish between different faces based on the extracted encodings, allowing it to recognize known individuals effectively.
+                </li>
+                <li>
+                    <strong>Face Detection:</strong> Provide an input image to the program to detect faces within the image. This step identifies the locations of faces.
+                </li>
+                <li>
+                    <strong>Face Recognition:</strong> For each detected face, the program compares the extracted face encodings with the known encodings obtained during training. By measuring the similarity between encodings, the program identifies known individuals present in the input image.
+                </li>
+                <li>
+                    <strong>Result Visualization:</strong> Once the recognition process is complete, the program visually annotates the input image by drawing bounding boxes around detected faces. If a known individual is recognized, their name is displayed alongside the respective bounding box.
+                </li>
+            </ol>
+            <p>
+                The combination of accurate face detection and recognition allows the facial detection program to be used for various applications, including security systems, photo organization, and more.
+            </p>
+        </section>
+        
+
+        <section id="known-individuals">
+            <h2>Known Individuals</h2>
+            <div class="name-pairs">
+                <div class="name-column">
+                    <ul>
+                        <li>Barack Obama</li>
+                        <li>Ben Affleck</li>
+                        <li>Elon Musk</li>
+                        <li>Elton John</li>
+                    </ul>
+                </div>
+                <div class="name-column">
+                    <ul>
+                        <li>Jerry Seinfeld</li>
+                        <li>Joe Biden</li>
+                        <li>Madonna</li>
+                        <li>Mindy Kaling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="detected-faces">
+            <h2>Detected Faces</h2>
+            <p>
+                This facial detection program is capable of recognizing known individuals in the input image. It will display the names of recognized individuals along with bounding boxes around their faces.
+            </p>
+            <p>
+                <strong>Note:</strong> For privacy reasons, only known individuals' names are displayed on this webpage.
+            </p>
+        </section>
+
+        <section id="example-output">
+            <h2>Example Output</h2>
+            <p>
+                Below is an example output of the facial detection program applied to an image:
+            </p>
+            <div class="output-image">
+                <img src="../static/output/facial_test.jpg" alt="Example Output">
+            </div>
+        </section>
+        <div class="button-container"> 
+            <a class="back-button" href="{{ url_for('index') }}">Back to Detection Page</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Facial & Object Recognition by Shivam</p>
+    </footer>
+</body>
+</html>

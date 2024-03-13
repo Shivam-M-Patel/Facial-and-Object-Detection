@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+ol {
+    margin-left: 2rem;
+}
+
+pre {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.output-image {
+    text-align: center;
+}
+
+.output-image img {
+    max-width: 100%;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.name-pairs {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.name-column {
+    flex: 1;
+    width: 45%;
+    margin-right: 2.5%;
+} 
+
+.output-image {
+    text-align: center;
+}
+
+.output-image img {
+    max-width: 100%;
+    border: 2px solid #434343;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4287f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.button-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #004691;
+}
+
+/* Animation */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply the animation to main sections */
+section {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+header {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+/* Apply the animation to the example output image */
+.output-image img {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+/* Apply the animation to the button */
+.button-container {
+    animation: fadeInLeft 1.5s ease-in-out;
+}

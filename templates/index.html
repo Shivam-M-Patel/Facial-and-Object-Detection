@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facial And Object Detection</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>From Pixels to Patterns: My Personal Endeavor with Facial and Object Detection</h1>
+  </header>
+  <main>
+
+    <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+      <label for="image-upload" class="custom-file-upload">
+        <input type="file" id="image-upload" name="image" accept="image/*" onchange="updateFileName(this)" />
+        Select an Image
+      </label>
+      <p id="selected-file">No file selected</p>
+      <p class="image-size-note">For better results, use an image with dimensions of about 1000 x 800 pixels.</p>
+   
+
+    <div id="options-container">
+      <h2 style="width: 100%; text-align: center; margin-bottom: 20px;">Select an Option</h2> <!-- Center the heading -->
+      <label class="option-card">
+        <input type="radio" name="detection-option" value="object-detection" id="object-detection" />
+        <span class="custom-radio"></span>
+        <h2 class="option-title">Object Detection</h2>
+        <p class="option-description">
+          Detect various objects within the uploaded image, such as cars, animals, and more.
+        </p>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="detection-option" value="facial-detection" id="facial-detection" />
+        <span class="custom-radio"></span>
+        <h2 class="option-title">Facial Detection</h2>
+        <p class="option-description">
+          Detect faces in the uploaded image. Great for analyzing portraits and group photos.
+        </p>
+      </label>
+    </div>
+    <div style="text-align: center;">
+      <button id="process-btn">Process Image</button>
+    </div>
+    </form>
+  
+    <section id="about-object-detection">
+      <h2><a href="{{ url_for('object_info') }}">About Object Detection Program</a></h2>
+    </section>
+
+    <section id="about-facial-detection">
+      <h2><a href="{{ url_for('facial_info') }}">About Facial Detection Program</a></h2>
+    </section>
+
+    <section id="about-me">
+      <h2><a href="{{ url_for('about_me') }}">About Me</a></h2>
+    </section>
+  
+  </main>
+  
+  <div id="loading-container" style="display: none;"> 
+  <div id="ring" style="display: none; background:#262626;">Loading
+    <span></span>
+  </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Facial & Object Recognition by Shivam</p>
+  </footer>
+
+</body>
+</html>
